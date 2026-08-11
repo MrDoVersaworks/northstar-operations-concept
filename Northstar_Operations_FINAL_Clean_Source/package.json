@@ -1,0 +1,14 @@
+{
+  "name": "northstar-operations-concept",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dark, responsive frontend operations concept with Playwright demo coverage.",
+  "scripts": {
+    "serve": "node tools/server.mjs",
+    "test:e2e": "playwright test",
+    "demo:e2e": "playwright test tests/demo.spec.ts --headed --workers=1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}

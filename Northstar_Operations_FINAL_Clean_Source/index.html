@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#060606" />
+  <title>Northstar Operations — Concept UI</title>
+  <link rel="stylesheet" href="./styles-1.css" />
+  <link rel="stylesheet" href="./styles-2.css" />
+  <link rel="stylesheet" href="./styles-3.css" />
+  <link rel="stylesheet" href="./styles-4.css" />
+  <link rel="stylesheet" href="./styles-5.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <section id="login-page" class="page login-page" data-page="login" aria-label="Login">
+      <div class="login-orbit" aria-hidden="true"></div>
+      <div class="login-wrap">
+        <div class="login-brand">
+          <div class="brand-mark" aria-hidden="true">N</div>
+          <div>
+            <p class="eyebrow">CONCEPT INTERFACE</p>
+            <h1>Northstar<br/>Operations</h1>
+          </div>
+        </div>
+        <div class="login-copy">
+          <p class="lede">A calm operational workspace for digital infrastructure, connectivity and service support.</p>
+          <div class="feature-chips" aria-label="Concept features">
+            <span>Service health</span><span>Incidents</span><span>Support</span>
+          </div>
+        </div>
+        <form id="login-form" class="login-card" novalidate>
+          <div class="card-kicker">Secure workspace</div>
+          <h2>Sign in</h2>
+          <p class="muted">Use the demo account to enter the prototype.</p>
+          <label for="email">Email</label>
+          <input id="email" data-testid="email" name="email" type="email" value="demo@northstar.local" autocomplete="username" required />
+          <label for="password">Password</label>
+          <div class="password-row">
+            <input id="password" data-testid="password" name="password" type="password" value="Demo2026!" autocomplete="current-password" required />
+            <button class="icon-button" type="button" id="toggle-password" aria-label="Show password">Show</button>
+          </div>
+          <div id="login-error" class="form-error" role="alert" aria-live="polite"></div>
+          <button id="login-button" data-testid="login-button" class="primary-button" type="submit">Continue</button>
+          <p class="demo-note">Demo credentials are prefilled. Authentication is simulated in-browser for this concept.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="workspace" class="workspace hidden" aria-label="Operations workspace">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark small" aria-hidden="true">N</div>
+          <div><strong>Northstar</strong><span>Operations</span></div>
+        </div>
+        <nav class="nav-list" aria-label="Primary navigation">
+          <button class="nav-item active" data-route="dashboard" data-testid="nav-dashboard"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-route="services" data-testid="nav-services"><span class="nav-icon">◫</span>Services</button>
+          <button class="nav-item" data-route="support" data-testid="nav-support"><span class="nav-icon">◎</span>Support</button>
+        </nav>
+        <div class="sidebar-foot">
+          <div class="profile-dot">OF</div>
+          <div><strong>Demo Operator</strong><span>Frontend concept</span></div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="page-eyebrow">OPERATIONS OVERVIEW</p>
+            <h2 id="page-title">Good afternoon.</h2>
+          </div>
+          <div class="topbar-actions">
+            <div class="live-pill"><span class="status-dot healthy"></span> Demo data</div>
+            <button class="secondary-button" id="logout-button" data-testid="logout-button">Sign out</button>
+          </div>
+        </header>
+
+        <section id="dashboard-view" class="view active" data-view="dashboard">
+          <div class="hero-strip">
+            <div>
+              <p class="hero-label">Service availability</p>
+              <div class="hero-metric">99.94<span>%</span></div>
+              <p class="muted">Across monitored connectivity services</p>
+            </div>
+            <div class="sparkline-wrap" aria-label="Availability trend graphic">
+              <svg viewBox="0 0 420 110" role="img" aria-label="Stable service availability trend">
+                <path class="gridline" d="M0 88H420 M0 58H420 M0 28H420" />
+                <path class="sparkline" d="M0 74 C40 68 53 51 84 55 S128 66 157 47 S209 36 240 43 S293 58 320 39 S376 28 420 32" />
+              </svg>
+              <div class="chart-caption"><span>08:00</span><span>12:00</span><span>Now</span></div>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <article class="metric-card"><span class="metric-label">Active services</span><strong>18</strong><small>17 healthy · 1 degraded</small></article>
+            <article class="metric-card"><span class="metric-label">Open incidents</span><strong>2</strong><small>0 critical · 2 under review</small></article>
+            <article class="metric-card"><span class="metric-label">Response SLA</span><strong>14m</strong><small>Average first response</small></article>
+            <article class="metric-card"><span class="metric-label">Changes today</span><strong>6</strong><small>All completed successfully</small></article>
+          </div>
+
+          <div class="content-grid">
+            <article class="panel-card span-2">
+              <div class="panel-head"><div><p class="card-kicker">SERVICE HEALTH</p><h3>Live service overview</h3></div><button class="text-button" data-route="services">View all</button></div>
+              <div class="service-table" role="table" aria-label="Service overview">
+                <div class="table-row table-head" role="row"><span>Service</span><span>Region</span><span>Status</span><span>Availability</span></div>
+                <button class="table-row service-row" data-service="Core Fibre A" role="row" data-testid="service-row-core"><span><b>Core Fibre A</b><small>Enterprise connectivity</small></span><span>Central Hub</span><span><i class="status-dot healthy"></i>Healthy</span><span>99.99%</span></button>
+                <button class="table-row service-row" data-service="Edge Transit B" role="row"><span><b>Edge Transit B</b><small>Regional transit</small></span><span>West Hub</span><span><i class="status-dot degraded"></i>Degraded</span><span>98.72%</span></button>
+                <button class="table-row service-row" data-service="Cloud Gateway" role="row"><span><b>Cloud Gateway</b><small>Business access</small></span><span>National</span><span><i class="status-dot healthy"></i>Healthy</span><span>99.96%</span></button>
+              </div>
+            </article>
+            <article class="panel-card">
+              <div class="panel-head"><div><p class="card-kicker">INCIDENT QUEUE</p><h3>Needs attention</h3></div><span class="count-badge">2</span></div>
+              <div class="incident"><span class="severity medium">P2</span><div><strong>Packet loss detected</strong><p>Edge Transit B · 11m ago</p></div></div>
+              <div class="incident"><span class="severity low">P3</span><div><strong>Latency threshold</strong><p>Branch Link 07 · 34m ago</p></div></div>
+              <button class="secondary-button full" data-route="support">Open support workspace</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="services-view" class="view" data-view="services">
+          <div class="section-intro"><div><h3>Connectivity services</h3><p class="muted">A compact view of provisioned infrastructure and current health.</p></div><button class="secondary-button" id="refresh-services" data-testid="refresh-services">Refresh status</button></div>
+          <div class="service-cards">
+            <article class="service-card" data-testid="service-card-core"><div class="service-card-head"><span class="service-icon">CF</span><span class="health-badge healthy-bg">Healthy</span></div><h4>Core Fibre A</h4><p>Enterprise connectivity · Central Hub</p><div class="service-stats"><span><small>Availability</small><b>99.99%</b></span><span><small>Latency</small><b>18 ms</b></span><span><small>Capacity</small><b>68%</b></span></div><button class="secondary-button full service-details" data-service="Core Fibre A" data-testid="service-details-core">View service</button></article>
+            <article class="service-card"><div class="service-card-head"><span class="service-icon">ET</span><span class="health-badge degraded-bg">Degraded</span></div><h4>Edge Transit B</h4><p>Regional transit · West Hub</p><div class="service-stats"><span><small>Availability</small><b>98.72%</b></span><span><small>Latency</small><b>63 ms</b></span><span><small>Capacity</small><b>81%</b></span></div><button class="secondary-button full service-details" data-service="Edge Transit B">View service</button></article>
+            <article class="service-card"><div class="service-card-head"><span class="service-icon">CG</span><span class="health-badge healthy-bg">Healthy</span></div><h4>Cloud Gateway</h4><p>Business access · National</p><div class="service-stats"><span><small>Availability</small><b>99.96%</b></span><span><small>Latency</small><b>24 ms</b></span><span><small>Capacity</small><b>57%</b></span></div><button class="secondary-button full service-details" data-service="Cloud Gateway">View service</button></article>
+          </div>
+          <div id="refresh-toast" class="toast hidden" role="status">Status refreshed · 3 services checked</div>
+        </section>
+
+        <section id="support-view" class="view" data-view="support">
+          <div class="support-layout">
+            <div>
+              <p class="card-kicker">SUPPORT WORKSPACE</p>
+              <h3>Report a service issue</h3>
+              <p class="muted support-copy">Capture the problem clearly. In production this form would post to a backend support endpoint and return a persisted ticket ID.</p>
+              <div class="support-points"><div><span>01</span><p><b>Client validation</b><br/>Required fields are checked before submission.</p></div><div><span>02</span><p><b>API boundary</b><br/>Payload shape is isolated from presentation logic.</p></div><div><span>03</span><p><b>Clear state</b><br/>Loading, success and error feedback are explicit.</p></div></div>
+            </div>
+            <form id="support-form" class="panel-card support-form" novalidate>
+              <label for="service">Service</label>
+              <select id="service" data-testid="ticket-service"><option>Edge Transit B</option><option>Core Fibre A</option><option>Cloud Gateway</option></select>
+              <label for="category">Category</label>
+              <select id="category" data-testid="ticket-category"><option>Connectivity degradation</option><option>Service unavailable</option><option>Account / access</option><option>Other</option></select>
+              <label for="priority">Priority</label>
+              <div class="segmented" id="priority" role="group" aria-label="Priority"><button type="button" data-priority="Normal" class="selected">Normal</button><button type="button" data-priority="High">High</button><button type="button" data-priority="Critical">Critical</button></div>
+              <label for="description">What happened?</label>
+              <textarea id="description" data-testid="ticket-description" rows="5" placeholder="Describe the observed issue...">Intermittent packet loss is affecting access for users on the west transit path.</textarea>
+              <div id="support-error" class="form-error" role="alert"></div>
+              <button id="submit-ticket" data-testid="submit-ticket" class="primary-button" type="submit">Submit incident</button>
+              <div id="ticket-success" class="success-box hidden" data-testid="ticket-success"><span>✓</span><div><strong>Incident created</strong><p id="ticket-id">NS-2026-0811</p></div></div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <dialog id="service-dialog" class="service-dialog">
+      <button class="dialog-close" id="dialog-close" aria-label="Close service details">×</button>
+      <p class="card-kicker">SERVICE DETAIL</p>
+      <h3 id="dialog-title">Core Fibre A</h3>
+      <p class="muted">A front-end representation of the current service contract. Values are mocked for demonstration.</p>
+      <div class="dialog-metrics"><span><small>Status</small><b><i class="status-dot healthy"></i> Healthy</b></span><span><small>Availability</small><b>99.99%</b></span><span><small>Latency</small><b>18 ms</b></span></div>
+      <div class="timeline"><div><span></span><p><b>12:02</b> Status check completed</p></div><div><span></span><p><b>10:41</b> Configuration sync verified</p></div><div><span></span><p><b>08:16</b> Daily service monitor completed</p></div></div>
+    </dialog>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
