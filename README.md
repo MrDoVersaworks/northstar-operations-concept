@@ -16,6 +16,22 @@ A compact, interview-ready frontend concept for a digital infrastructure / conne
 - `prefers-reduced-motion` accessibility support
 - Playwright E2E journey covering the critical demo flow
 
+## Screenshots
+
+### Desktop dashboard
+
+![Northstar Operations desktop dashboard](docs/dashboard.png)
+
+### Mobile dashboard
+
+![Northstar Operations mobile dashboard](docs/mobile-dashboard.png)
+
+### Sign-in experience
+
+![Northstar Operations desktop sign-in](docs/login.png)
+
+![Northstar Operations mobile sign-in](docs/mobile-login.png)
+
 ## Scope
 
 This is intentionally a **frontend concept**, not a representation of an employer's real internal platform. Authentication and service data are mocked so the interface can be demonstrated independently of a backend.
