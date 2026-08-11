@@ -29,6 +29,45 @@
             <span>Service health</span><span>Incidents</span><span>Support</span>
           </div>
         </div>
+
+        <div class="login-telemetry" aria-label="Demo operations snapshot">
+          <div class="telemetry-head">
+            <div>
+              <p class="eyebrow">OPERATIONS PULSE</p>
+              <p class="telemetry-caption">Live-style service topology for the demo estate.</p>
+            </div>
+            <span class="telemetry-live"><span class="status-dot healthy"></span>Demo telemetry</span>
+          </div>
+          <div class="telemetry-map" role="img" aria-label="Northstar Hub connected to Core Fibre A, Cloud Gateway and Edge Transit B">
+            <svg viewBox="0 0 560 152" aria-hidden="true" focusable="false">
+              <path class="telemetry-axis" d="M18 76H542" />
+              <ellipse class="telemetry-ring" cx="278" cy="76" rx="118" ry="46" />
+              <ellipse class="telemetry-ring" cx="278" cy="76" rx="188" ry="70" />
+              <path class="telemetry-path active" d="M278 76 C224 43 151 39 78 66" />
+              <path class="telemetry-path" d="M278 76 C341 38 417 33 490 48" />
+              <path class="telemetry-path active" d="M278 76 C342 101 407 116 477 116" />
+              <circle class="telemetry-core-pulse" cx="278" cy="76" r="15" />
+              <circle class="telemetry-node core" cx="278" cy="76" r="6" />
+              <circle class="telemetry-node healthy" cx="78" cy="66" r="4.5" />
+              <circle class="telemetry-node healthy" cx="490" cy="48" r="4.5" />
+              <circle class="telemetry-node degraded" cx="477" cy="116" r="4.5" />
+              <text class="telemetry-label core" x="291" y="73">NORTHSTAR HUB</text>
+              <text class="telemetry-sub" x="291" y="87">operations control</text>
+              <text class="telemetry-label" x="25" y="48">CORE FIBRE A</text>
+              <text class="telemetry-sub" x="25" y="59">Central Hub · healthy</text>
+              <text class="telemetry-label" x="421" y="29">CLOUD GATEWAY</text>
+              <text class="telemetry-sub" x="421" y="40">National · healthy</text>
+              <text class="telemetry-label" x="398" y="137">EDGE TRANSIT B</text>
+              <text class="telemetry-sub" x="398" y="148">West Hub · degraded</text>
+            </svg>
+          </div>
+          <div class="telemetry-stats" aria-label="Demo telemetry metrics">
+            <span><small>Availability</small><b>99.94%</b></span>
+            <span><small>Monitored services</small><b>18</b></span>
+            <span><small>Open incidents</small><b>2</b></span>
+          </div>
+        </div>
+
         <form id="login-form" class="login-card" novalidate>
           <div class="card-kicker">Secure workspace</div>
           <h2>Sign in</h2>
